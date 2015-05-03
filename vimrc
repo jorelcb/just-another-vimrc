@@ -14,22 +14,23 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 " plugin on GitHub repo
-Plugin 'scrooloose/syntastic'	    "Syntax checking hacks for vim
-Plugin 'myint/syntastic-extras'	    "Additional Syntastic syntax checkers and features (for Vim).
+Plugin 'scrooloose/syntastic'	"Syntax checking hacks for vim
+Plugin 'myint/syntastic-extras'	"Additional Syntastic syntax checkers and features (for Vim).
 Plugin 'tpope/vim-fugitive'	    "fugitive.vim: a Git wrapper so awesome
-Plugin 'tommcdo/vim-fubitive' 	    "Add Bitbucket URL support to fugitive.vim's :Gbrowse command
+Plugin 'tommcdo/vim-fubitive' 	"Add Bitbucket URL support to fugitive.vim's :Gbrowse command
 Plugin 'joonty/phpqa'		    "PHP QA tools for Vim http://www.joncairns.com
-Plugin 'scrooloose/nerdtree'	    "A tree explorer plugin for vim
+Plugin 'scrooloose/nerdtree'	"A tree explorer plugin for vim
 Plugin 'jistr/vim-nerdtree-tabs'    "NERDTree and tabs together in Vim, painlessly
 Plugin 'kien/ctrlp.vim'		    "Fuzzy file, buffer, mru, tag, etc finder. http://kien.github.com/ctrlp.vim
 Plugin 'bling/vim-airline'	    "lean & mean status/tabline for vim that's light as air
 Plugin 'majutsushi/tagbar'	    "Vim plugin that displays tags in a window, ordered by scope http://majutsushi.github.com/tagbar/
 Plugin 'xolox/vim-misc'		    "Miscellaneous auto-load Vim scripts http://peterodding.com/code/vim/misc/
-Plugin 'xolox/vim-easytags'	    "Automated tag file generation and syntax highlighting of tags in Vim http://peterodding.com/code/vim/easytags/
-Plugin 'Shougo/neocomplete.vim'	    "Next generation completion framework after neocomplcache
+Plugin 'xolox/vim-easytags'	    "Automated tag file generation and syntax highlighting of tags http://peterodding.com/code/vim/easytags/
+Plugin 'Shougo/neocomplete.vim'	"Next generation completion framework after neocomplcache
+Plugin 'vim-php/phpctags'       "An enhanced ctags compatible index generator written in pure PHP
 
 " plugin from http://vim-scripts.org/vim/scripts.html
-Plugin 'Xdebug'
+" Plugin 'Xdebug'
 Plugin 'phpcomplete.vim'
 
 " Git plugin not hosted on GitHub
@@ -98,73 +99,44 @@ let g:neocomplete#enable_smart_case = 1
 " Set minimum syntax keyword length.
 let g:neocomplete#sources#syntax#min_keyword_length = 3
 
+" phpctags config
+let g:tagbar_phpctags_bin='/home/jorel/bin/phpctags-0.5.1/'
+
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Sets how many lines of history VIM has to remember
-set history=700
-
-" Set to auto read when a file is changed from the outside
-set autoread
+set history=700     " Sets how many lines of history VIM has to remember
+set autoread        " Set to auto read when a file is changed from the outside
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
 let mapleader = ","
 let g:mapleader = ","
-
-" Fast saving
-nmap <leader>w :w!<cr>
+nmap <leader>w :w!<CR>  " Fast saving
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => VIM user interface
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Set 5 lines to the cursor - when moving vertically using j/k
-set so=5
-
-" Always show current position
-set ruler
-
-" Height of the command bar
-set cmdheight=2
-
-" A buffer becomes hidden when it is abandoned
-set hid
+set so=5            " Set 5 lines to the cursor - when moving vertically using j/k
+set ruler           " Always show current position
+set cmdheight=2     " Height of the command bar
+set hid             " A buffer becomes hidden when it is abandoned
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
 
-" Ignore case when searching
-set ignorecase
-
-" When searching try to be smart about cases 
-set smartcase
-
-" Highlight search results
-set hlsearch
-
-" Makes search act like search in modern browsers
-set incsearch
-
-" Don't redraw while executing macros (good performance config)
-set lazyredraw
-
-" For regular expressions turn magic on
-set magic
-
-" Show matching brackets when text indicator is over them
-set showmatch
-" How many tenths of a second to blink when matching brackets
-set mat=2
-
-" No annoying sound on errors
-set noerrorbells
-
-" Set utf8 as standard encoding and en_US as the standard language
-set encoding=utf8
-
-" Use Unix as the standard file type
-set ffs=unix,dos,mac
+set ignorecase          " Ignore case when searching
+set smartcase           " When searching try to be smart about cases 
+set hlsearch            " Highlight search results
+set incsearch           " Makes search act like search in modern browsers
+set lazyredraw          " Don't redraw while executing macros (good performance config)
+set magic               " For regular expressions turn magic on
+set showmatch           " Show matching brackets when text indicator is over them
+set mat=2               " How many tenths of a second to blink when matching brackets
+set noerrorbells        " No annoying sound on errors
+set encoding=utf8       " Set utf8 as standard encoding and en_US as the standard language
+set ffs=unix,dos,mac    " Use Unix as the standard file type
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Files, backups and undo
@@ -177,23 +149,15 @@ set noswapfile
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Use spaces instead of tabs
-set expandtab
-
-" Be smart when using tabs ;)
-set smarttab
-
-" 1 tab == 4 spaces
-set shiftwidth=4
+set expandtab       " Use spaces instead of tabs
+set smarttab        " Be smart when using tabs ;)
+set shiftwidth=4    " 1 tab == 4 spaces
 set tabstop=4
-
-" Linebreak on 500 characters
-set lbr
+set lbr             " Linebreak on 500 characters
 set tw=500
-
-set ai "Auto indent
-set si "Smart indent
-set wrap "Wrap lines
+set ai              "Auto indent
+set si              "Smart indent
+set wrap            "Wrap lines
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Moving around, tabs, windows and buffers
@@ -206,33 +170,14 @@ map k gk
 map <space> /
 map <c-space> ?
 
-" Disable highlight when <leader><cr> is pressed
-map <silent> <leader><cr> :noh<cr>
+" Disable highlight when <leader><CR> is pressed
+map <silent> <leader><CR> :noh<CR>
 
 " Smart way to move between windows
 map <C-j> <C-W>j
 map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
-
-" Close the current buffer
-map <leader>bd :Bclose<cr>
-
-" Close all the buffers
-map <leader>ba :1,1000 bd!<cr>
-
-" Useful mappings for managing tabs
-map <leader>tn :tabnew<cr>
-map <leader>to :tabonly<cr>
-map <leader>tc :tabclose<cr>
-map <leader>tm :tabmove
-
-" Opens a new tab with the current buffer's path
-" Super useful when editing files in the same directory
-map <leader>te :tabedit <c-r>=expand("%:p:h")<cr>/
-
-" Switch CWD to the directory of the open buffer
-map <leader>cd :cd %:p:h<cr>:pwd<cr>
 
 " Specify the behavior when switching between buffers 
 try
@@ -246,12 +191,13 @@ autocmd BufReadPost *
    \ if line("'\"") > 0 && line("'\"") <= line("$") |
    \   exe "normal! g`\"" |
    \ endif
+
 " Remember info about open buffers on close
 set viminfo^=%
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Misc
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Remove the Windows ^M - when the encodings gets messed up
-noremap <Leader>m mmHmt:%s/<C-V><cr>//ge<cr>'tzt'm
+noremap <Leader>m mmHmt:%s/<C-V><CR>//ge<CR>'tzt'm      " Remove the Windows ^M - when the encodings gets messed up
+
 
