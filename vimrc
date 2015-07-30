@@ -17,8 +17,9 @@ Plugin 'gmarik/Vundle.vim'
 Plugin 'scrooloose/syntastic'	"Syntax checking hacks for vim
 Plugin 'myint/syntastic-extras'	"Additional Syntastic syntax checkers and features (for Vim).
 Plugin 'tpope/vim-fugitive'	    "fugitive.vim: a Git wrapper so awesome
+Plugin 'tpope/vim-git'          "Vim Git runtime files http://www.vim.org/scripts/script.php?script_id=1654
 Plugin 'tommcdo/vim-fubitive' 	"Add Bitbucket URL support to fugitive.vim's :Gbrowse command
-Plugin 'joonty/phpqa'		    "PHP QA tools for Vim http://www.joncairns.com
+" Plugin 'joonty/vim-phpqa'		"PHP QA tools for Vim http://www.joncairns.com
 Plugin 'scrooloose/nerdtree'	"A tree explorer plugin for vim
 Plugin 'jistr/vim-nerdtree-tabs'    "NERDTree and tabs together in Vim, painlessly
 Plugin 'kien/ctrlp.vim'		    "Fuzzy file, buffer, mru, tag, etc finder. http://kien.github.com/ctrlp.vim
@@ -28,13 +29,12 @@ Plugin 'xolox/vim-misc'		    "Miscellaneous auto-load Vim scripts http://peterod
 Plugin 'xolox/vim-easytags'	    "Automated tag file generation and syntax highlighting of tags http://peterodding.com/code/vim/easytags/
 Plugin 'Shougo/neocomplete.vim'	"Next generation completion framework after neocomplcache
 Plugin 'vim-php/phpctags'       "An enhanced ctags compatible index generator written in pure PHP
+Plugin 'stephpy/vim-php-cs-fixer'
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'Xdebug'
-Plugin 'phpcomplete.vim'
+" Plugin 'phpcomplete.vim'
 
-" Git plugin not hosted on GitHub
-" Plugin 'git://git.wincent.com/command-t.git'
 
 " git repos on your local machine (i.e. when working on your own plugin)
 " Plugin 'file:///home/gmarik/path/to/plugin'
@@ -55,8 +55,13 @@ filetype plugin indent on    " required
 """"""""""""""""""""""""""""""""""""""""""""""""""""""
 autocmd QuickFixCmdPost *grep* cwindow
 
+" Pass arguments to phpcs binary
+"let g:phpqa_codesniffer_args = "--standard=PSR2"
+let g:php_cs_fixer_php_path = "/usr/bin/phpcs"
+
 " Syntastic config
 set statusline+=%#warningmsg#
+set statusline+=%{fugitive#statusline()}
 set statusline+=%{SyntasticStatuslineFlag()}
 set statusline+=%*
 
@@ -87,6 +92,10 @@ let g:ctrlp_custom_ignore = '\v[\/]\.(git|hg|svn)$'
 
 " Vim airline config
 let g:airline#extensions#tabline#enabled = 1
+let g:airline_theme='powerlineish'
+" let g:airline_theme='solarized'
+let g:airline_powerline_fonts=1
+" let g:airline_solarized_bg='light'
 
 " Tagbar config
 nmap <F8> :TagbarToggle<CR>
@@ -107,6 +116,7 @@ let g:tagbar_phpctags_bin='/home/jorel/bin/phpctags-0.5.1/'
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set history=700     " Sets how many lines of history VIM has to remember
 set autoread        " Set to auto read when a file is changed from the outside
+set t_Co=256
 
 " With a map leader it's possible to do extra key combinations
 " like <leader>w saves the current file
@@ -121,6 +131,8 @@ set so=5            " Set 5 lines to the cursor - when moving vertically using j
 set ruler           " Always show current position
 set cmdheight=2     " Height of the command bar
 set hid             " A buffer becomes hidden when it is abandoned
+set number
+" set background=light
 
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
