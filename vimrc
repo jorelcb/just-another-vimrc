@@ -14,22 +14,23 @@ Plugin 'gmarik/Vundle.vim'
 " Keep Plugin commands between vundle#begin/end.
 
 " plugin on GitHub repo
-Plugin 'scrooloose/syntastic'	"Syntax checking hacks for vim
-Plugin 'myint/syntastic-extras'	"Additional Syntastic syntax checkers and features (for Vim).
-Plugin 'tpope/vim-fugitive'	    "fugitive.vim: a Git wrapper so awesome
+Plugin 'scrooloose/syntastic' "Syntax checking hacks for vim
+Plugin 'myint/syntastic-extras'   "Additional Syntastic syntax checkers and features (for Vim).
+Plugin 'tpope/vim-fugitive'       "fugitive.vim: a Git wrapper so awesome
 Plugin 'tpope/vim-git'          "Vim Git runtime files http://www.vim.org/scripts/script.php?script_id=1654
-Plugin 'tommcdo/vim-fubitive' 	"Add Bitbucket URL support to fugitive.vim's :Gbrowse command
-" Plugin 'joonty/vim-phpqa'		"PHP QA tools for Vim http://www.joncairns.com
-Plugin 'scrooloose/nerdtree'	"A tree explorer plugin for vim
+Plugin 'tommcdo/vim-fubitive'     "Add Bitbucket URL support to fugitive.vim's :Gbrowse command
+" Plugin 'joonty/vim-phpqa'       "PHP QA tools for Vim http://www.joncairns.com
+Plugin 'scrooloose/nerdtree'  "A tree explorer plugin for vim
 Plugin 'jistr/vim-nerdtree-tabs'    "NERDTree and tabs together in Vim, painlessly
-Plugin 'kien/ctrlp.vim'		    "Fuzzy file, buffer, mru, tag, etc finder. http://kien.github.com/ctrlp.vim
-Plugin 'bling/vim-airline'	    "lean & mean status/tabline for vim that's light as air
-Plugin 'majutsushi/tagbar'	    "Vim plugin that displays tags in a window, ordered by scope http://majutsushi.github.com/tagbar/
-Plugin 'xolox/vim-misc'		    "Miscellaneous auto-load Vim scripts http://peterodding.com/code/vim/misc/
-Plugin 'xolox/vim-easytags'	    "Automated tag file generation and syntax highlighting of tags http://peterodding.com/code/vim/easytags/
-Plugin 'Shougo/neocomplete.vim'	"Next generation completion framework after neocomplcache
+Plugin 'kien/ctrlp.vim'           "Fuzzy file, buffer, mru, tag, etc finder. http://kien.github.com/ctrlp.vim
+Plugin 'bling/vim-airline'        "lean & mean status/tabline for vim that's light as air
+Plugin 'majutsushi/tagbar'        "Vim plugin that displays tags in a window, ordered by scope http://majutsushi.github.com/tagbar/
+Plugin 'xolox/vim-misc'           "Miscellaneous auto-load Vim scripts http://peterodding.com/code/vim/misc/
+Plugin 'xolox/vim-easytags'       "Automated tag file generation and syntax highlighting of tags http://peterodding.com/code/vim/easytags/
+Plugin 'Shougo/neocomplete.vim'   "Next generation completion framework after neocomplcache
 Plugin 'vim-php/phpctags'       "An enhanced ctags compatible index generator written in pure PHP
 Plugin 'stephpy/vim-php-cs-fixer'
+Plugin 'docker/docker' , {'rtp': '/contrib/syntax/vim/'}
 
 " plugin from http://vim-scripts.org/vim/scripts.html
 " Plugin 'Xdebug'
