@@ -9,9 +9,10 @@ This is Just another vimrc file example, using [Vim-plug] as their Vim Plugin Ma
 
 1. Introduction:
 
-4. Install Plugins:
+2. Install Plugins:
 Launch `vim` and run `:PlugInstall`
-Restart vim and enjoy!
+
+3. Restart vim and enjoy!
 
 *Thank you!*
 
