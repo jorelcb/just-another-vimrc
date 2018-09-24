@@ -21,7 +21,7 @@ Restart vim and enjoy!
 ## TODO:
 * ✓ Vim documentation
 
-[Vundle]:http://github.com/junegunn/vim-plug
+[Vim-plug]:http://github.com/junegunn/vim-plug
 [Vim]:http://www.vim.org
 [Git]:http://git-scm.com
 [Vim scripts]:http://vim-scripts.org/vim/scripts.html
