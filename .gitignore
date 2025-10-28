@@ -1,0 +1,30 @@
+# Vim plugin directory
+plugged/
+
+# Swap files
+*.swp
+*.swo
+*~
+
+# Undo files
+*.un~
+
+# Session files
+Session.vim
+.session
+
+# Netrw history
+.netrwhist
+
+# CoC data
+.vim/
+
+# macOS
+.DS_Store
+
+# Backup files
+*.backup
+*.bak
+
+# Log files
+*.log
