@@ -61,21 +61,27 @@ This Vim configuration provides a powerful, modern development environment while
 
 ## 📸 Screenshots
 
+### For those who believe text is the ultimate pixel art
+
 ```
 ┌─────────────────────────────────────────────────────────────┐
 │ NORMAL  ~/.vim/vimrc                              80% ☰ 1:1 │ ← Airline
-├──────────┬──────────────────────────────────────────────────┤
-│▾ .vim/   │  1  " Vim Configuration                          │
-│  ▾ plugged│  2  set number                                   │
-│    ale    │  3  set relativenumber                           │
-│    fzf    │  4                                               │
-│  autoload │  5  " Leader key = Space                         │
-│  vimrc    │  6  let mapleader = " "                          │
-│  README.md│  7                                               │
-│           │  8  " Fast file search: <Space>ff                │
-└──────────┴──────────────────────────────────────────────────┘
+├───────────┬─────────────────────────────────────────────────┤
+│▾ .vim/    │  1  " Vim Configuration                         │
+│  ▾ plugged│  2  set number                                  │
+│    ale    │  3  set relativenumber                          │
+│    fzf    │  4                                              │
+│  autoload │  5  " Leader key = Space                        │
+│  vimrc    │  6  let mapleader = " "                         │
+│  README.md│  7                                              │
+│           │  8  " Fast file search: <Space>ff               │
+└───────────┴─────────────────────────────────────────────────┘
   NERDTree           Main Editor Area
 ```
+
+### The actual deal (now in glorious 24-bit color)
+
+![Vim Configuration Screenshot](just-another-vimrc-screenshot.png)
 
 ---
 

@@ -28,3 +28,6 @@ Session.vim
 
 # Log files
 *.log
+
+# IDE
+.idea/

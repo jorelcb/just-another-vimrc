@@ -2,7 +2,7 @@
 " VIM CONFIGURATION - Optimizada con plugins populares
 " ============================================================================
 
-" CONFIGURACI�N B�SICA
+" CONFIGURACIÓN BÁSICA
 " ============================================================================
 set nocompatible              " Desactivar compatibilidad con vi
 filetype off                  " Requerido para vim-plug
@@ -10,40 +10,42 @@ filetype off                  " Requerido para vim-plug
 " Encoding
 set encoding=utf-8
 set fileencoding=utf-8
+set fileencodings=utf-8,latin1
+scriptencoding utf-8
 
-" Numeraci�n de l�neas
-set number                    " N�meros de l�nea
-set relativenumber            " N�meros relativos
-set ruler                     " Mostrar posici�n del cursor
+" Numeración de líneas
+set number                    " Números de línea
+set relativenumber            " Números relativos
+set ruler                     " Mostrar posición del cursor
 
-" Indentaci�n
-set autoindent                " Auto-indentaci�n
-set smartindent               " Indentaci�n inteligente
-set tabstop=4                 " Tama�o del tab
+" Indentación
+set autoindent                " Auto-indentación
+set smartindent               " Indentación inteligente
+set tabstop=4                 " Tamaño del tab
 set shiftwidth=4              " Espacios para auto-indent
 set expandtab                 " Convertir tabs a espacios
-set smarttab                  " Inserci�n inteligente de tabs
+set smarttab                  " Inserción inteligente de tabs
 
-" B�squeda
-set hlsearch                  " Resaltar b�squedas
-set incsearch                 " B�squeda incremental
-set ignorecase                " Ignorar may�sculas en b�squeda
-set smartcase                 " May�sculas si hay may�sculas en b�squeda
+" Búsqueda
+set hlsearch                  " Resaltar búsquedas
+set incsearch                 " Búsqueda incremental
+set ignorecase                " Ignorar mayúsculas en búsqueda
+set smartcase                 " Mayúsculas si hay mayúsculas en búsqueda
 
 " UI/UX
 set showcmd                   " Mostrar comandos
-set showmatch                 " Mostrar par�ntesis coincidentes
+set showmatch                 " Mostrar paréntesis coincidentes
 set wildmenu                  " Autocompletado de comandos mejorado
 set wildmode=longest:full,full
 set laststatus=2              " Siempre mostrar barra de estado
-set cursorline                " Resaltar l�nea actual
-set scrolloff=8               " Mantener 8 l�neas visibles al scroll
+set cursorline                " Resaltar línea actual
+set scrolloff=8               " Mantener 8 líneas visibles al scroll
 set mouse=                    " Mouse desactivado (Vim tradicional)
 set termguicolors             " Colores verdaderos en terminal
 
 " Rendimiento
 set lazyredraw                " No redibujar durante macros
-set updatetime=300            " Tiempo de actualizaci�n m�s r�pido
+set updatetime=300            " Tiempo de actualización más rápido
 set timeoutlen=500            " Tiempo de espera para mapeos
 
 " Archivos y respaldos
@@ -72,31 +74,31 @@ Plug 'preservim/nerdtree'                   " Explorador de archivos
 Plug 'ryanoasis/vim-devicons'               " Iconos para archivos
 Plug 'tiagofumo/vim-nerdtree-syntax-highlight' " Colores en NERDTree
 
-" --- Navegaci�n y b�squeda ---
+" --- Navegación y búsqueda ---
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }  " Buscador fuzzy
-Plug 'junegunn/fzf.vim'                     " Integraci�n FZF con Vim
+Plug 'junegunn/fzf.vim'                     " Integración FZF con Vim
 Plug 'preservim/tagbar'                     " Navegador de tags/funciones
-Plug 'easymotion/vim-easymotion'            " Movimiento r�pido
+Plug 'easymotion/vim-easymotion'            " Movimiento rápido
 
 " --- Git ---
-Plug 'tpope/vim-fugitive'                   " Integraci�n con Git
+Plug 'tpope/vim-fugitive'                   " Integración con Git
 Plug 'airblade/vim-gitgutter'               " Mostrar cambios de git
 
-" --- Edici�n ---
-Plug 'tpope/vim-surround'                   " Manipular par�ntesis/comillas
-Plug 'tpope/vim-commentary'                 " Comentar c�digo f�cilmente
-Plug 'jiangmiao/auto-pairs'                 " Auto cerrar par�ntesis
-" Plug 'terryma/vim-multiple-cursors'         " M�ltiples cursores
-Plug 'vim-scripts/indentpython.vim'         " Mejor indentaci�n Python
+" --- Edición ---
+Plug 'tpope/vim-surround'                   " Manipular paréntesis/comillas
+Plug 'tpope/vim-commentary'                 " Comentar código fácilmente
+Plug 'jiangmiao/auto-pairs'                 " Auto cerrar paréntesis
+" Plug 'terryma/vim-multiple-cursors'         " Múltiples cursores
+Plug 'vim-scripts/indentpython.vim'         " Mejor indentación Python
 
 " --- Autocompletado y LSP ---
 Plug 'neoclide/coc.nvim', {'branch': 'release'}  " Autocompletado inteligente
 
 " --- Snippets ---
-Plug 'honza/vim-snippets'                   " Colecci�n de snippets
+Plug 'honza/vim-snippets'                   " Colección de snippets
 
 " --- Linting y formateo ---
-Plug 'dense-analysis/ale'                   " Linting as�ncrono
+Plug 'dense-analysis/ale'                   " Linting asíncrono
 
 " --- Lenguajes ---
 Plug 'pangloss/vim-javascript'              " JavaScript mejorado
@@ -107,9 +109,9 @@ Plug 'rust-lang/rust.vim'                   " Rust
 Plug 'vim-python/python-syntax'             " Python mejorado
 
 " --- Utilidades ---
-Plug 'mbbill/undotree'                      " Visualizar �rbol de deshacer
+Plug 'mbbill/undotree'                      " Visualizar árbol de deshacer
 Plug 'tpope/vim-repeat'                     " Repetir comandos de plugins
-Plug 'christoomey/vim-tmux-navigator'       " Navegaci�n Vim-Tmux
+Plug 'christoomey/vim-tmux-navigator'       " Navegación Vim-Tmux
 
 call plug#end()
 
@@ -118,7 +120,7 @@ filetype plugin indent on
 syntax enable
 
 " ============================================================================
-" CONFIGURACI�N DE PLUGINS
+" CONFIGURACIÓN DE PLUGINS
 " ============================================================================
 
 " --- Tema de colores ---
@@ -137,8 +139,8 @@ let g:airline#extensions#coc#enabled = 1
 let NERDTreeShowHidden=1
 let NERDTreeMinimalUI=1
 let NERDTreeIgnore=['\.git$', '\.DS_Store$', 'node_modules']
-let g:NERDTreeDirArrowExpandable = '�'
-let g:NERDTreeDirArrowCollapsible = '�'
+let g:NERDTreeDirArrowExpandable = '▸'
+let g:NERDTreeDirArrowCollapsible = '▾'
 
 " --- FZF ---
 let g:fzf_layout = { 'down': '40%' }
@@ -188,13 +190,13 @@ endfunction
 " Usar <c-space> para activar completado
 inoremap <silent><expr> <c-space> coc#refresh()
 
-" GoTo navegaci�n con CoC
+" GoTo navegación con CoC
 nmap <silent> gd <Plug>(coc-definition)
 nmap <silent> gy <Plug>(coc-type-definition)
 nmap <silent> gi <Plug>(coc-implementation)
 nmap <silent> gr <Plug>(coc-references)
 
-" Mostrar documentaci�n con K
+" Mostrar documentación con K
 nnoremap <silent> K :call ShowDocumentation()<CR>
 
 function! ShowDocumentation()
@@ -205,7 +207,7 @@ function! ShowDocumentation()
   endif
 endfunction
 
-" Renombrar s�mbolo
+" Renombrar símbolo
 nmap <leader>rn <Plug>(coc-rename)
 
 " ============================================================================
@@ -217,16 +219,16 @@ let mapleader = " "
 let maplocalleader = ","
 
 " --- General ---
-" Guardar r�pido
+" Guardar rápido
 nnoremap <leader>w :w<CR>
 " Salir
 nnoremap <leader>q :q<CR>
 " Guardar y salir
 nnoremap <leader>x :wq<CR>
-" Limpiar b�squeda
+" Limpiar búsqueda
 nnoremap <leader>h :nohlsearch<CR>
 
-" --- Navegaci�n de ventanas ---
+" --- Navegación de ventanas ---
 nnoremap <C-h> <C-w>h
 nnoremap <C-j> <C-w>j
 nnoremap <C-k> <C-w>k
@@ -278,11 +280,11 @@ map <leader>j <Plug>(easymotion-j)
 map <leader>k <Plug>(easymotion-k)
 map <leader>s <Plug>(easymotion-s)
 
-" --- Mover l�neas arriba/abajo ---
+" --- Mover líneas arriba/abajo ---
 vnoremap J :m '>+1<CR>gv=gv
 vnoremap K :m '<-2<CR>gv=gv
 
-" --- Mantener selecci�n al indentar ---
+" --- Mantener selección al indentar ---
 vnoremap < <gv
 vnoremap > >gv
 
@@ -290,7 +292,7 @@ vnoremap > >gv
 " AUTOCOMANDOS
 " ============================================================================
 
-" Restaurar posici�n del cursor al abrir archivo
+" Restaurar posición del cursor al abrir archivo
 augroup RestoreCursor
   autocmd!
   autocmd BufReadPost *
@@ -311,7 +313,7 @@ augroup TrimWhitespace
   autocmd BufWritePre * %s/\s\+$//e
 augroup END
 
-" Configuraciones espec�ficas por tipo de archivo
+" Configuraciones específicas por tipo de archivo
 augroup FileTypeSettings
   autocmd!
   autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
@@ -321,5 +323,5 @@ augroup FileTypeSettings
 augroup END
 
 " ============================================================================
-" FIN DE CONFIGURACI�N
+" FIN DE CONFIGURACIÓN
 " ============================================================================
